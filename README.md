@@ -1,2 +1,2 @@
-# XXXcomputation
-APCS Final project repo
+# EnlightenedLamps
+APCS final project repo

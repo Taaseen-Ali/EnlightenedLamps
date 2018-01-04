@@ -1,10 +1,10 @@
-<Team Name (without word "team")>
-<Member Bubbles>
-<Member Buttercup>
-<Member Blossom>
-pd <pd#>
+Enlightened Lamps
+Taaseen Ali
+Eddie Zhu
+Frank Chen
+pd 1
 ---------------------
-<Project>
+Crossword Engine
 
 
 

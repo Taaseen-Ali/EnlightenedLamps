@@ -17,15 +17,40 @@ class Word{
     public int getLength() {return LENGTH;}
 
     public String getLetter(int i) {return WORDAR[i];}
-    
-    public int[] getCommonLetterPos(Word w){
-        ArrayList<int> retAr = new ArrayList<int>();
-	for(int i=0; i < Math.min(this.getLength(), w.getLength()); i++){
-	    if(this.getLetter(i).equals(w.getLetter(i))){
-		retAr.add(i);
+
+    public int[] getLetterPos(String s){
+	ArrayList<Integer> temp = new ArrayList<Integer>();
+	for(int i=0; i<LENGTH; i++){
+	    if(WORDAR[i].equals(s)){
+		temp.add(i);
 	    }
 	}
-	return retAr.toArray();
+	int[] retAr = new int[temp.size()];
+	for(int i=0; i<temp.size(); i++) retAr[i] = temp.get(i);
+	return retAr;
+    }
+
+    public String[] getCommonLetters(Word w){
+	ArrayList<String> temp = new ArrayList<String>();
+	for(String letter: WORDAR){
+	    for(String otherLetter: w.getArray()){
+		if(letter.equals(otherLetter) && !temp.contains(letter)) temp.add(letter);
+	    }
+	}
+	
+	String[] retAr = new String[temp.size()];
+	for(int i=0; i<temp.size(); i++) retAr[i] = temp.get(i);
+	return retAr;
+    }
+	
+
+
+    public static void main(String args[]){
+	Word a = new Word("hello");
+	Word b = new Word("hgkll");
+	String[] ar = a.getCommonLetters(b);
+
+	for(String i: ar) System.out.print("[" + i + "]");
     }
 }
 

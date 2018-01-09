@@ -4,12 +4,17 @@ Taaseen Ali, Frank Chen, Eddie Zhu
 Crossword Engine 5000
 
 Description:
-This is a program that is used to generate the skeleton of a crossword puzzle. The program can take in a file that contains a list of words to be used to generate the puzzle. The program can also take in a file which is filled with words already sorted in a crossword format. The user can additionally input a file with a list of clues. 
+This is a program that is used to generate crossword puzzles. 
+The program can take in a file that contains a list of words 
+to be used to randomly generate a completed puzzle. 
+The user then has the option to display the crossword with 
+blank boxes so that another user may work through the puzzle.
+ The program can also take in a file that adheres to guidelines 
+(specifics tbd) to convert a user created crossword into an 
+interactive one that can be played on the commandline much 
+like the randomly generated crosswords. 
 
 Instructions:
-1) Compile and Run woo.java
-2) Input word file.
-3) Input clue file.
-2) Input a position to obtain a clue for that row/column.
-3) Input a word if the answer is known, another position otherwise. The user can also input one letter at a time. 
-4) Repeat until the crossword is solved. 
+ Compile and Run woo.java
+ Follow on screen instructions to Input word and clue files.
+ type into command line  “keywords” for a list of keywords and their functions to interact with the program

@@ -51,6 +51,8 @@ We changed ___ to ___ bc...
 <etc>
 <etc>
 
+1) We decided to add a class called wordPosition because we deemed that it would be useful to not only have positions of letters, but the position of a whole word based on it's first letter's position and the size and direction of the word. 
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <tales of wisdom gained...>
@@ -72,7 +74,7 @@ LESSONS LEARNED
 
 yyyy-mm-dd
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+<Taaseen Ali> :: <Thing member did.>
+<Frank Chen> :: <Thing member did.>
+<Eddie Zhu> :: <Thing member did.>
 ==============================================================

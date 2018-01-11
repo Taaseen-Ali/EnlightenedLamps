@@ -1,6 +1,6 @@
 class CrosswordPosition{
     private final  int XCOR, YCOR, LENGTH;
-    public static final int UP=1, DOWN=2, LEFT=3, RIGHT=4;
+    public static final int ACROSS = 1, DOWN = 2;
     public final int DIRECTION;
     public CrosswordPosition(int x, int y, int length, int dir){
 	XCOR = x;

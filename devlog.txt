@@ -72,9 +72,51 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+2018-01-02
+--------------------------------------------------------------
+<Frank Chen> :: Added proposal
+
+
+2018-01-03
+--------------------------------------------------------------
+<Taaseen Ali> :: Created devlog
+
+2018-01-04
+--------------------------------------------------------------
+<Taaseen Ali> :: Updated devlog, updated proposal
+
+2018-01-05
+--------------------------------------------------------------
+<Taaseen Ali> :: Added uml, updated Word.java, added CrosswordPosition.java
+<Frank Chen> :: Helped with UML
+<Eddie Zhu> :: Helped with Word.java
+
+2018-01-08
+--------------------------------------------------------------
+<Taaseen Ali> :: Helped with flowchart and todo list
+<Frank Chen> :: Helped with todo list
+<Eddie Zhu> :: Updated README, added todo list, added initial flowchart
+
+2018-01-09
+--------------------------------------------------------------
+<Taaseen Ali> :: Updated todo list
+
+
+2018-01-10
+--------------------------------------------------------------
+<Taaseen Ali> :: Updated flowchart, updated code
+<Frank Chen> :: Added Driver skeleton
+<Eddie Zhu> :: Updated devlog and todo list, added ClueBank.java skeleton, added very basic runnable Woo.java
+
+2018-01-11
+--------------------------------------------------------------
+<Taaseen Ali> :: Updated Code
+<Frank Chen> :: Helped with code
+<Eddie Zhu> :: Helped with code, updated flowchart.
+
 yyyy-mm-dd
 --------------------------------------------------------------
-<Taaseen Ali> :: <Thing member did.>
+<Taaseen Ali> :: 
 <Frank Chen> :: <Thing member did.>
 <Eddie Zhu> :: <Thing member did.>
 ==============================================================

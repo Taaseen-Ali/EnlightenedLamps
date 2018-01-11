@@ -110,13 +110,13 @@ LESSONS LEARNED
 
 2018-01-11
 --------------------------------------------------------------
-<Taaseen Ali> :: Updated Code
+<Taaseen Ali> :: Updated Code in CrosswordPosition.java and Word.java
 <Frank Chen> :: Helped with code
 <Eddie Zhu> :: Helped with code, updated flowchart.
 
-yyyy-mm-dd
+2018-01-12
 --------------------------------------------------------------
-<Taaseen Ali> :: 
-<Frank Chen> :: <Thing member did.>
-<Eddie Zhu> :: <Thing member did.>
+<Taaseen Ali> :: Added wordPosition.java in class
+<Frank Chen> :: Helped with wordPosition.java
+<Eddie Zhu> :: Helped with wordPosition.java
 ==============================================================

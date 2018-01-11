@@ -1,8 +1,8 @@
 class CrosswordPosition{
     private final  int XCOR, YCOR, LENGTH;
-    private final String DIRECTION;
-
-    public CrosswordPosition(int x, int y, int length, String dir){
+    public static final int UP=1, DOWN=2, LEFT=3, RIGHT=4;
+    public final int DIRECTION;
+    public CrosswordPosition(int x, int y, int length, int dir){
 	XCOR = x;
 	YCOR = y;
 	LENGTH = length;
@@ -15,6 +15,6 @@ class CrosswordPosition{
 
     public int getY() {return YCOR;}
 
-    public String getDirection() {return DIRECTION;}
+    public int getDirection() {return DIRECTION;}
 }
 

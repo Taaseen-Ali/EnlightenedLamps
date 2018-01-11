@@ -49,7 +49,7 @@ class Word{
 	Word a = new Word("hello");
 	Word b = new Word("hgkll");
 	String[] ar = a.getCommonLetters(b);
-
+	int[] ar2 = a.getLetterPos("l");
 	for(String i: ar) System.out.print("[" + i + "]");
     }
 }

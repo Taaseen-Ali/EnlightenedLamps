@@ -119,4 +119,29 @@ LESSONS LEARNED
 <Taaseen Ali> :: Added wordPosition.java in class
 <Frank Chen> :: Helped with wordPosition.java
 <Eddie Zhu> :: Helped with wordPosition.java
+
+2018-01-13
+--------------------------------------------------------------
+<Taaseen Ali> :: 
+<Frank Chen> :: 
+<Eddie Zhu> :: 
+
+2018-01-14
+--------------------------------------------------------------
+<Taaseen Ali> :: 
+<Frank Chen> :: 
+<Eddie Zhu> :: 
+
+2018-01-15
+--------------------------------------------------------------
+<Taaseen Ali> :: 
+<Frank Chen> :: 
+<Eddie Zhu> :: 
+
+2018-01-16
+--------------------------------------------------------------
+<Taaseen Ali> :: 
+<Frank Chen> :: 
+<Eddie Zhu> :: 
+
 ==============================================================

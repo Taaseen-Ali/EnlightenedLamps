@@ -93,7 +93,6 @@ class CrosswordBuilder{
   public static CrosswordPosition[] getInsertionSites(Crossword cw, Word w){
 	ArrayList<CrosswordPosition> positions = new ArrayList<CrosswordPosition>();
 	PositionedWord word = new PositionedWord(w);
-	System.out.println("Points in getInsertionSites() for: " + w.getWord());
 	if(cw.numWords==0){
 	    CrosswordPosition[] start = {new CrosswordPosition(cw.size/2, cw.size/2,
 							       word.getPos().getLength(),
@@ -115,7 +114,6 @@ class CrosswordBuilder{
 			    if(!collides(cw, word) && !hasAdjacentWords(cw, word)){
 				positions.add(word.getPos().copy());
 			    }
-			    else System.out.println("none");
 			}
 		    }
 		}
@@ -133,7 +131,6 @@ class CrosswordBuilder{
 			    if(!collides(cw, word) && !hasAdjacentWords(cw, word)){
 				positions.add(word.getPos().copy());
 			    }
-			    else System.out.println("none");
 			}
 		    }
 		}
@@ -142,7 +139,6 @@ class CrosswordBuilder{
 
 	CrosswordPosition[] retAr = new CrosswordPosition[positions.size()];
 	for(int i=0; i< positions.size(); i++){
-	    System.out.println(positions.get(i).getX() + "," + positions.get(i).getY());
 	    retAr[i] = positions.get(i);
 	}
 	return retAr;
@@ -154,7 +150,6 @@ class CrosswordBuilder{
 	for(Word w: words){
 	    toInsert.add(w);
 	}
-	System.out.println(toInsert.size());
 	int numTries=0;
 	int size=toInsert.size();
 	while(toInsert.size()>0){
@@ -172,7 +167,6 @@ class CrosswordBuilder{
 	    if(size==newSize) numTries++;
 	    if(numTries>1) break;
 	}
-	System.out.println(toInsert.size());
 	return toInsert;
     }
 
@@ -185,7 +179,6 @@ class CrosswordBuilder{
 	    Scanner scanner = new Scanner(file);
 	    while (scanner.hasNextLine()) {
 		String line = scanner.nextLine();
-		System.out.println(line);
 		words.add(new Word(line));
 	    }
 	    ret = new Word[words.size()];
@@ -201,27 +194,37 @@ class CrosswordBuilder{
 	return ret;
     }
 
-    public static String getClues(String f){
-	String ret = "";
+    public static String[] getClues(String f){
+	ArrayList<String> clues = new ArrayList<String>();
 	File file = new File(f);
+	String ret[];
 	try{
 	    Scanner scanner = new Scanner(file);
 	    while (scanner.hasNextLine()) {
 		String line = scanner.nextLine();
-		ret += line + "\n";
+		clues.add(line);
 	    }
 	}
 
 	catch (FileNotFoundException e){
 	    System.out.println("file no bueno");
 	}
+
+	ret = new String[clues.size()];
 	
+	for(int i=0; i<clues.size(); i++){
+	    ret[i] = clues.get(i);
+	}
 	return ret;
     }
 	
     public static Crossword generateFromFile(String f){
 	Crossword c = new Crossword();
-	insert(c, getWords(f));
+	String[] clues = getClues("clues.txt");
+	Word[] words = getWords(f);
+	for(int i=0; i<words.length; i++)
+	    words[i].setClue(clues[i]);
+	insert(c, words);
 	return c;
     }
 }

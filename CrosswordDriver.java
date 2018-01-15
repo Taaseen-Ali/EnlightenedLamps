@@ -5,6 +5,10 @@ public class CrosswordDriver {
 	
     public void play(){
 	System.out.println("============================||Welcome to Crossword!||===========================");
+	System.out.println("================================================================================");
+	System.out.println("||                               HELP DESK                                    ||");
+	System.out.println("================================================================================");
+	help();
 	printBoard();
 	showClues();
 	String k;
@@ -19,7 +23,32 @@ public class CrosswordDriver {
 	    keyword(k);
 	}
     }
+
+    public void help(){
+	System.out.println("You can navigate through the interface by typing in one of the following");
+	System.out.println("keywords and pressing enter to do different things;");
+
+	System.out.println("set:            follow the prompts to enter x and y coordinates and the letter which");
+	System.out.println("                you would like to enter (please do not input anything but an integer");
+	System.out.println("                set as it will throw an error");
+
+	System.out.println("set multiple:   will allow for multiple sets consecutively (to break out of");
+	System.out.println("                set multiple please type 'quit' when asked for a letter");
+
+	System.out.println("check answers:  will check if the answers you have put in are correct");
+
+	System.out.println("show clues:     print out clues and corresponding positions");
+
+	System.out.println("show:           will print out the board");
+
+	System.out.println("show answer:    will print out crossword with answers (you filthy cheater!)");
+
+	System.out.println("quit:           will exit from the crossword game (but why woud you do that?)");;
+
+	System.out.println("help:           will bring up this page");;
 	
+    }
+    
     public void printBoard() {
 	System.out.println("================================================================================");
 	System.out.println("||                                    BOARD                                   ||");
@@ -75,6 +104,9 @@ public class CrosswordDriver {
 	    break;
 	case "show":
 	    printBoard();
+	    break;
+	case "help":
+	    help();
 	    break;
 	default:
 	    System.out.println("Keyword not found");

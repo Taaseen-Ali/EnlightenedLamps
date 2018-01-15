@@ -3,7 +3,8 @@ class Word{
     final String WORD;
     final int LENGTH;
     final String[] WORDAR;
-
+    String clue;
+    
     public Word(String s){
 	WORD = s;
 	WORDAR = s.split("");
@@ -52,5 +53,9 @@ class Word{
 	int[] ar2 = a.getLetterPos("l");
 	for(String i: ar) System.out.print("[" + i + "]");
     }
+
+    public void setClue(String s){ clue = s;}
+
+    public String getClue(){ return clue;}
 }
 

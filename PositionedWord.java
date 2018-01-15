@@ -3,12 +3,14 @@ public class PositionedWord extends Word{
     public PositionedWord(Word w, CrosswordPosition p){
 	super(w.getWord());
 	pos = p;
+	clue = w.getClue();
 	
     }
 
     public PositionedWord(Word w, int x, int y, int dir){
 	super(w.getWord());
 	pos = new CrosswordPosition(x, y, LENGTH, dir);
+	clue = w.getClue();
     }
 
     public PositionedWord(Word w){
@@ -18,8 +20,11 @@ public class PositionedWord extends Word{
     }
 
     public PositionedWord copy(){
-	return new PositionedWord(new Word(WORD), pos);
+	PositionedWord ret = new PositionedWord(new Word(WORD), pos);
+	ret.clue = getClue();
+	return ret;
     }
 
     public CrosswordPosition getPos(){return pos;}
+
 }

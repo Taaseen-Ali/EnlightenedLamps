@@ -1,4 +1,4 @@
-**Enlightened Lamps**
+**Enlightened Lamps --- ** 
 **Taaseen Ali, Frank Chen, Eddie Zhu**
 ------
 

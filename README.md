@@ -1,5 +1,4 @@
-**Enlightened Lamps --- ** 
-**Taaseen Ali, Frank Chen, Eddie Zhu**
+**Enlightened Lamps --- Taaseen Ali, Frank Chen, Eddie Zhu**
 ------
 
 ### **Crossword Engine 5000**

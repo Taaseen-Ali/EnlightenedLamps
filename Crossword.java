@@ -4,10 +4,11 @@ public class Crossword{
     String[][] answers;
     PositionedWord wordList[];
     String name;
-    //ClueBank clues = new ClueBank();
+    String clues;
     public Crossword(){
 	numWords = 0;
 	size = 25;
+	clues = "";
 	board =  new String[size][size];
 	answers = new String[size][size];
 	wordList = new PositionedWord[25];
@@ -44,17 +45,68 @@ public class Crossword{
 
     }
 
-    public void print(){
+    public boolean checkAnswers(){
+	for(int i=0; i<size; i++){
+	    for(int k=0; k<size; k++){
+		if(answers[i][k] != board[i][k]) return false;
+	    }
+	}
+	return true;
+    }
+
+    public boolean set(int x, int y, String s){
+	if(board[y][x] == null){
+	    System.out.println("(" + x + ", " + y + ") is an invalid position");
+	    return false;
+	}
+	else board[y][x] = s;
+	return true;
+    }
+    public void setClues(String c){ clues = CrosswordBuilder.getClues(c);}
+    public void printClues(){System.out.println(clues);}
+    
+    public void printAnswers(){
+	System.out.print("    ");
+	for(int i=0; i<size; i++) System.out.print("[" + i%10 + "]");
+	System.out.println();
+	int row = 0;
 	for(String[] s: answers){
+	    if(row>=10) System.out.print("[" + row + "]");
+	    else System.out.print("[" + row + " ]");
+	    row++;
 	    for(String p: s){
-		if(p == null) System.out.print("[ ]");
+		if(p == null) System.out.print(" · ");
 		else System.out.print("[" + p + "]");
 	    }
 	    System.out.println();
 	}
     }
 
+    public void generateBoard(){
+	for(int i=0; i<size; i++){
+	    for(int k=0; k<size; k++){
+		if(answers[i][k]!=null) board[i][k] = " ";
+	    }
+	}
+    }
+    public void printBoard(){
+	System.out.print("    ");
+	for(int i=0; i<size; i++) System.out.print("[" + i%10 + "]");
+	System.out.println();
+	int row = 0;
+	for(String[] s: board){
+	    if(row>=10) System.out.print("[" + row + "]");
+	    else System.out.print("[" + row + " ]");
+	    row++;
+	    for(String p: s){
+		if(p == null) System.out.print(" · ");
+		else System.out.print("[" + p + "]");
+	    }
+	    System.out.println();
+	}
+    }
     public static void main(String args[]){
+	/*
 	Crossword c = new Crossword();
 	Word  hiker, friend, brown, goodbye, crying, coding, happiness, stuyvesant, purple, interesting, rowdy, socioeconomic, zebra, thahmina;
 	hiker = new Word("hiker");
@@ -84,7 +136,17 @@ public class Crossword{
 	c.print();
 	CrosswordBuilder.insert(c, words);
 	c.print();
+	*/
 
+	Crossword c = CrosswordBuilder.generateFromFile("listOfWords.txt");
+	c.setClues("clues.txt");
+	c.generateBoard();
+
+	new CrosswordDriver(c).play();
+	//	c.printBoard();
+	//c.printClues();
+	//	c.printAnswers();
+	//	CrosswordBuilder.getWords("listOfWords.txt");
 
     }
 }		

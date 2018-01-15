@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+
 class CrosswordBuilder{
     public static boolean collides(Crossword cw, PositionedWord w){
 	int x = w.getPos().getX();
@@ -90,6 +94,12 @@ class CrosswordBuilder{
 	ArrayList<CrosswordPosition> positions = new ArrayList<CrosswordPosition>();
 	PositionedWord word = new PositionedWord(w);
 	System.out.println("Points in getInsertionSites() for: " + w.getWord());
+	if(cw.numWords==0){
+	    CrosswordPosition[] start = {new CrosswordPosition(cw.size/2, cw.size/2,
+							       word.getPos().getLength(),
+							       CrosswordPosition.ACROSS)};
+	    return start;
+	}
 	
 	for(int k=0; k<cw.numWords; k++){
 	    PositionedWord otherWord = cw.wordList[k];
@@ -165,4 +175,54 @@ class CrosswordBuilder{
 	System.out.println(toInsert.size());
 	return toInsert;
     }
+
+    public static Word[] getWords(String f){
+	ArrayList<Word> words = new ArrayList<Word>();
+	Word[] ret = new Word[0];
+	File file = new File(f);
+
+	try{
+	    Scanner scanner = new Scanner(file);
+	    while (scanner.hasNextLine()) {
+		String line = scanner.nextLine();
+		System.out.println(line);
+		words.add(new Word(line));
+	    }
+	    ret = new Word[words.size()];
+	    for(int i=0; i<words.size(); i++){
+		ret[i] = words.get(i);
+	    }
+	}
+
+	catch (FileNotFoundException e){
+	    System.out.println("file no bueno");
+	}
+	
+	return ret;
+    }
+
+    public static String getClues(String f){
+	String ret = "";
+	File file = new File(f);
+	try{
+	    Scanner scanner = new Scanner(file);
+	    while (scanner.hasNextLine()) {
+		String line = scanner.nextLine();
+		ret += line + "\n";
+	    }
+	}
+
+	catch (FileNotFoundException e){
+	    System.out.println("file no bueno");
+	}
+	
+	return ret;
+    }
+	
+    public static Crossword generateFromFile(String f){
+	Crossword c = new Crossword();
+	insert(c, getWords(f));
+	return c;
+    }
 }
+

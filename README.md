@@ -14,4 +14,4 @@ such as showing clues, checking your answers, inputting letters, etc.
 #### Instructions:
 
 - Compile and run Woo.java
-Follow the given instructions
+- Follow the given instructions

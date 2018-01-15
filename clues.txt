@@ -1,15 +1,15 @@
-hello
-hiker
-friend
-brown
-goodbye
-crying
-coding
-stuyvesant
-purple
-interesting
-rowdy
-socioeconomic
-zebra
-happiness
-eddie
+The most basic form of greeting
+A trip that people take in the forest
+A companion that one can talk to
+What is the color of soil?
+The most basic form of farewell
+An action depicting sadness of happiness
+What we all do in computer science
+What's the best specialized highschool in NYC?
+Mix red and blue
+Arousing curiosity; catching one's attention
+Five letter word for noisy/disorderly
+The interaction of social and economical factors
+That white animal with black stripes
+A feeling we never get in Stuyvesant
+One of the contributors in this project

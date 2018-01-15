@@ -15,3 +15,14 @@ such as showing clues, checking your answers, inputting letters, etc.
 
 - Compile and run Woo.java
 - Follow the given instructions
+
+#### Keywords:
+
+- set: Inputs a letter into the desired x- and y- coordinate
+- set multiple: Allows for multiple sets consecutively
+- check answers: Checks if words are correct
+- show clues: Prints out clues for each word
+- show: Prints out the current board
+- show answer: Prints out board with answers
+- quit: Exits from current crossword game
+- help: Prints out keywords and their usage

@@ -31,5 +31,6 @@ class CrosswordPosition{
 
     public void setLength(int i) {length = i;}
 
+    public CrosswordPosition copy() {return new CrosswordPosition(xcor, ycor, length, direction);}
 }
 

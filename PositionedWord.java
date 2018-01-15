@@ -14,6 +14,11 @@ public class PositionedWord extends Word{
     public PositionedWord(Word w){
 	super(w.getWord());
 	pos = new CrosswordPosition();
+	pos.setLength(LENGTH);
+    }
+
+    public PositionedWord copy(){
+	return new PositionedWord(new Word(WORD), pos);
     }
 
     public CrosswordPosition getPos(){return pos;}

@@ -53,6 +53,7 @@ public class CrosswordDriver {
 	System.out.println("================================================================================");
 	System.out.println("||                                    BOARD                                   ||");
 	System.out.println("================================================================================");
+	System.out.println("                                  |10|                                          ");
 	System.out.println();
 	cw.printBoard();
     }
@@ -81,6 +82,9 @@ public class CrosswordDriver {
     }
 	
     public void showClues() {
+	System.out.println("================================================================================");
+	System.out.println("||                                     CLUES                                  ||");
+	System.out.println("================================================================================");
 	cw.printClues();
     }
 	

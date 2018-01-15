@@ -5,7 +5,7 @@ Enlightened Lamps --- Taaseen Ali, Frank Chen, Eddie Zhu
 
 #### Description:
 
-	The Crossword Engine 5000 is a program used to generate crossword
+The Crossword Engine 5000 is a program used to generate crossword
 puzzles when given a list of words. Upon running, the program would
 automatically scan through the list and randomly generate a crossword
 puzzle. After that, the user is able to execute multiple commands 
@@ -13,5 +13,5 @@ such as showing clues, checking your answers, inputting letters, etc.
  
 #### Instructions:
 
-	1. Compile and run Woo.java
-	2. Follow the given instructions
+1. Compile and run Woo.java
+2. Follow the given instructions

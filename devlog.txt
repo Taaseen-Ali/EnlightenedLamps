@@ -6,7 +6,6 @@ pd 1
 ---------------------
 Crossword Engine
 
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -21,6 +20,7 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - The user has the ability to input a string for the x/y cordinates when using the set keyword in the driver class. Doing so will cause and error.
 - Due to the random nature of creating a crossword, some random arrangements make it so that inserting the remaining words impossible. The program simply returns the unsused words in an array. Most of the time this is not an issue, however.
+- There are a couple of holes in our user inputs with the main menu and redundancy in our code for Woo.java class
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -38,7 +38,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - It's best not to divide and conquer; doing so leads to conflicting errors when pushing and pulling.
-- **EXTENSIVE** testing is necessary before using a method in other classes. We spent **so much** time debugging only to find out that an "easy" method that we thought was air-tight really wasn't.
+- EXTENSIVE testing is necessary before using a method in other classes. We spent so much time debugging only to find out that an "easy" method that we thought was air-tight really wasn't.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

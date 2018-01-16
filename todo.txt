@@ -13,8 +13,6 @@ Priotized Todo List
 6. Implement clue bank.
 7. Clean up user interface
 8. Clean up README.md (use markup language)
-9. Add word position, with boolean method ifCollides. If true, word can't be placed. If false then it potentially can be placed in that position. 
+9. Add word position, with boolean method Collides. If true, word can't be placed. If false then it potentially can be placed in that position. 
 
-Complete:
-1. Crossword position
-2. 
+

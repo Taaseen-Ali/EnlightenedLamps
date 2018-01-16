@@ -32,8 +32,9 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Our crossword program have a lot of complex algorithms that had to be converted into code. 
+- Our crossword program have a lot of complex algorithms that had to be converted into code. 
 That was certainly the hardest part of this project.
+- There were two lines in CrosswordBuilder that took an entire day to fix, and it was literally just returning true. Thankfully we found it eventually and added it.
 
 
 UNRESOLVED ISSUES

@@ -32,7 +32,8 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Our crossword program have a lot of complex algorithms that had to be converted into code. That was certainly the hardest part of this project.
+Our crossword program have a lot of complex algorithms that had to be converted into code. 
+That was certainly the hardest part of this project.
 
 
 UNRESOLVED ISSUES
@@ -47,7 +48,8 @@ We learned about the switch statement which is similar to an if-then-else statem
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We decided to add a class called wordPosition because we deemed that it would be useful to not only have positions of letters, but the position of a whole word based on it's first letter's position and the size and direction of the word. 
+We decided to add a class called wordPosition because we deemed that it would be useful to not only have positions of letters, 
+but the position of a whole word based on it's first letter's position and the size and direction of the word. 
 
 
 LESSONS LEARNED

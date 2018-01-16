@@ -32,30 +32,29 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+Our crossword program have a lot of complex algorithms that had to be converted into code. That was certainly the hardest part of this project.
+
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
->
+We couldn't flesh out the program as a whole. The user have a lot of freedom with the interface and that can cause problems.
+
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+We learned about the switch statement which is similar to an if-then-else statement but cleaner.
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
-<etc>
-<etc>
+We decided to add a class called wordPosition because we deemed that it would be useful to not only have positions of letters, but the position of a whole word based on it's first letter's position and the size and direction of the word. 
 
-1) We decided to add a class called wordPosition because we deemed that it would be useful to not only have positions of letters, but the position of a whole word based on it's first letter's position and the size and direction of the word. 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
+It's best not to divide and conquer; doing so leads to conflicting errors when pushing and pulling.
+
+
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

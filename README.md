@@ -16,7 +16,7 @@ such as showing clues, checking your answers, inputting letters, etc.
  1) Make sure that `listOfWord.txt` and `clues.txt` exist in the same folder as `Woo.java` (Sample files should have been provided for you)
  
  2) run the following in your terminal:
-    `javac Woo.java`
+    `javac Woo.java` <br>
     `java Woo`
     
  3) Follow the instructions that appear in the terminal

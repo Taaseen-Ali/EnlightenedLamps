@@ -122,26 +122,20 @@ LESSONS LEARNED
 
 2018-01-13
 --------------------------------------------------------------
-<Taaseen Ali> :: 
-<Frank Chen> :: 
-<Eddie Zhu> :: 
+<Taaseen Ali> :: Worked on code
+<Frank Chen> :: Tested code, gave suggestions
+<Eddie Zhu> :: Tested code, gave suggestions
 
 2018-01-14
 --------------------------------------------------------------
-<Taaseen Ali> :: 
-<Frank Chen> :: 
-<Eddie Zhu> :: 
+<Taaseen Ali> :: Worked on code
+<Frank Chen> :: Tested code, gave suggestions
+<Eddie Zhu> :: Tested code, gave suggestions
 
 2018-01-15
 --------------------------------------------------------------
-<Taaseen Ali> :: 
-<Frank Chen> :: 
-<Eddie Zhu> :: 
-
-2018-01-16
---------------------------------------------------------------
-<Taaseen Ali> :: 
-<Frank Chen> :: 
-<Eddie Zhu> :: 
+<Taaseen Ali> :: Made sure Woo.java works with all classes
+<Frank Chen> :: Remade flowchart and edited README
+<Eddie Zhu> :: Updated UML diagram and edited code
 
 ==============================================================

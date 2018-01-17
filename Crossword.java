@@ -79,7 +79,7 @@ public class Crossword{
 	    else System.out.print("[" + row + " ]");
 	    row++;
 	    for(String p: s){
-		if(p == null) System.out.print(" · ");
+		if(p == null) System.out.print(" * ");
 		else System.out.print("[" + p + "]");
 	    }
 	    System.out.println();
@@ -103,7 +103,7 @@ public class Crossword{
 	    else System.out.print("[" + row + " ]");
 	    row++;
 	    for(String p: s){
-		if(p == null) System.out.print(" · ");
+		if(p == null) System.out.print(" * ");
 		else System.out.print("[" + p + "]");
 	    }
 	    System.out.println();

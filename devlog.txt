@@ -75,56 +75,56 @@ Eddie Zhu :: Helped with Word.java
 
 2018-01-08
 --------------------------------------------------------------
-<Taaseen Ali> :: Helped with flowchart and todo list
-<Frank Chen> :: Helped with todo list
-<Eddie Zhu> :: Updated README, added todo list, added initial flowchart
+Taaseen Ali :: Helped with flowchart and todo list
+Frank Chen :: Helped with todo list
+Eddie Zhu :: Updated README, added todo list, added initial flowchart
 
 2018-01-09
 --------------------------------------------------------------
-<Taaseen Ali> :: Updated todo list
+Taaseen Ali :: Updated todo list
 
 
 2018-01-10
 --------------------------------------------------------------
-<Taaseen Ali> :: Updated flowchart, updated code
-<Frank Chen> :: Added Driver skeleton
-<Eddie Zhu> :: Updated devlog and todo list, added ClueBank.java skeleton, added very basic runnable Woo.java
+Taaseen Ali :: Updated flowchart, updated code
+Frank Chen :: Added Driver skeleton
+Eddie Zhu :: Updated devlog and todo list, added ClueBank.java skeleton, added very basic runnable Woo.java
 
 2018-01-11
 --------------------------------------------------------------
-<Taaseen Ali> :: Updated Code in CrosswordPosition.java and Word.java
-<Frank Chen> :: Helped with code
-<Eddie Zhu> :: Helped with code, updated flowchart.
+Taaseen Ali :: Updated Code in CrosswordPosition.java and Word.java
+Frank Chen :: Helped with code
+Eddie Zhu :: Helped with code, updated flowchart.
 
 2018-01-12
 --------------------------------------------------------------
-<Taaseen Ali> :: Added wordPosition.java in class
-<Frank Chen> :: Helped with wordPosition.java
-<Eddie Zhu> :: Helped with wordPosition.java
+Taaseen Ali :: Added wordPosition.java in class
+Frank Chen :: Helped with wordPosition.java
+Eddie Zhu :: Helped with wordPosition.java
 
 2018-01-13
 --------------------------------------------------------------
-<Taaseen Ali> :: Worked on code; implemented getInsertionSites()
-<Frank Chen> :: Tested code, gave suggestions
-<Eddie Zhu> :: Tested code, gave suggestions
+Taaseen Ali :: Worked on code; implemented getInsertionSites()
+Frank Chen :: Tested code, gave suggestions
+Eddie Zhu :: Tested code, gave suggestions
 
 2018-01-14
 --------------------------------------------------------------
-<Taaseen Ali> :: Worked on code; fixed getInsertionSites, created and spent the day debugging hasAdjacentWords()
-<Frank Chen> :: Tested code, gave suggestions
-<Eddie Zhu> :: Tested code, gave suggestions
+Taaseen Ali :: Worked on code; fixed getInsertionSites, created and spent the day debugging hasAdjacentWords()
+Frank Chen :: Tested code, gave suggestions
+Eddie Zhu :: Tested code, gave suggestions
 
 2018-01-15
 --------------------------------------------------------------
-<Taaseen Ali> :: Made sure Woo.java works with all classesm, updated flow.pdf, uml.pdf
-<Frank Chen> :: Remade flowchart and edited README
-<Eddie Zhu> :: Updated UML diagram and edited code
+Taaseen Ali :: Made sure Woo.java works with all classesm, updated flow.pdf, uml.pdf
+Frank Chen :: Remade flowchart and edited README
+Eddie Zhu :: Updated UML diagram and edited code
 
 2018-01-16
 --------------------------------------------------------------
-<Taaseen Ali> :: Added comments and last minute design changes
-<Frank Chen> :: Added comments and aided in design changes
-<Eddie Zhu> :: Added comments and aided in design changes
+Taaseen Ali :: Added comments and last minute design changes
+Frank Chen :: Added comments and aided in design changes
+Eddie Zhu :: Added comments and aided in design changes
 
 
 ==============================================================

@@ -56,22 +56,22 @@ LESSONS LEARNED
 
 2018-01-02
 --------------------------------------------------------------
-<Frank Chen> :: Added proposal
+Frank Chen :: Added proposal
 
 
 2018-01-03
 --------------------------------------------------------------
-<Taaseen Ali> :: Created devlog
+Taaseen Ali :: Created devlog
 
 2018-01-04
 --------------------------------------------------------------
-<Taaseen Ali> :: Updated devlog, updated proposal
+Taaseen Ali :: Updated devlog, updated proposal
 
 2018-01-05
 --------------------------------------------------------------
-<Taaseen Ali> :: Added uml, updated Word.java, added CrosswordPosition.java
-<Frank Chen> :: Helped with UML
-<Eddie Zhu> :: Helped with Word.java
+Taaseen Ali :: Added uml, updated Word.java, added CrosswordPosition.java
+Frank Chen :: Helped with UML
+Eddie Zhu :: Helped with Word.java
 
 2018-01-08
 --------------------------------------------------------------

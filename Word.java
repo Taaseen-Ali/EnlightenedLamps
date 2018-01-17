@@ -19,6 +19,7 @@ class Word{
 
     public String getLetter(int i) {return WORDAR[i];}
 
+	// Returns an array of the positions of letter s
     public int[] getLetterPos(String s){
 	ArrayList<Integer> temp = new ArrayList<Integer>();
 	for(int i=0; i<LENGTH; i++){
@@ -31,6 +32,7 @@ class Word{
 	return retAr;
     }
 
+	// Returns an array of common letters between this word and w
     public String[] getCommonLetters(Word w){
 	ArrayList<String> temp = new ArrayList<String>();
 	for(String letter: WORDAR){
@@ -44,15 +46,6 @@ class Word{
 	return retAr;
     }
 	
-
-
-    public static void main(String args[]){
-	Word a = new Word("hello");
-	Word b = new Word("hgkll");
-	String[] ar = a.getCommonLetters(b);
-	int[] ar2 = a.getLetterPos("l");
-	for(String i: ar) System.out.print("[" + i + "]");
-    }
 
     public void setClue(String s){ clue = s;}
 

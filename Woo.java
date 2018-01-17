@@ -42,19 +42,7 @@ class Woo{
 		new CrosswordDriver(c).play();
 	    }
 	    
-	    System.out.println("What would you like to do now??");
-	    System.out.println("1)Regenerate new crossword randomly");
-	    System.out.println("2)play existing crossword again");
-	    System.out.println("3)quit");
-	    ans = Keyboard.readInt();
-	    if(ans == 3){
-		running = false;
-	    }
-
-	    
-	    if(ans == 2){
-		new CrosswordDriver(c).play();
-	    }
+	 
 	}
     }
 }

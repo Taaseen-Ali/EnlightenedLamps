@@ -50,8 +50,12 @@ public class Crossword{
 	return true;
     }
 
-    public boolean set(int x, int y, String s){
-	if(board[y][x] == null){
+    public boolean set(int x, int y, String s){  
+	if(x<0||y<0){
+	    System.out.println("(" + x + ", " + y + ") is an invalid position");
+	    return false;
+	}
+	else if(board[y][x] == null){
 	    System.out.println("(" + x + ", " + y + ") is an invalid position");
 	    return false;
 	}

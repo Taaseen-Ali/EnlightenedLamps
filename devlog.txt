@@ -11,16 +11,13 @@ Crossword Engine
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Our crossword program have a lot of complex algorithms that had to be converted into code. 
-That was certainly the hardest part of this project.
-- Figuring out a way to randomly insert words into viable positions in the crossword
-- There were two lines in CrosswordBuilder that took an entire day to fix, and it was literally just returning true. Thankfully we found it eventually and added it.
+That was certainly the hardest part of this project. (getInsertionSites() and accompanying helper methods). We burnt through dozens of flowcharts and diagrams in order to figure out a method that easily determined whether or not a word could occupy a position. We ultimately figured out that it came down to 2 major criteria, whether or not a word collides with any other and whether or not is adjacent to any other word.  
+- There were two lines in CrosswordBuilder that took an entire day to fix, and it was literally just returning true. Thankfully we found it eventually and added it. Many hours were lost unfortunatley.
 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- The user has the ability to input a string for the x/y cordinates when using the set keyword in the driver class. Doing so will cause and error.
 - Due to the random nature of creating a crossword, some random arrangements make it so that inserting the remaining words impossible. The program simply returns the unsused words in an array. Most of the time this is not an issue, however.
-- There are a couple of holes in our user inputs with the main menu and redundancy in our code for Woo.java class
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,14 +27,15 @@ COOL STUFF LEARNED
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- We decided to add a class called PosiitonedWord because we deemed that it would be useful to seperate new words and words that already have positions when implemetning our various methods in CrosswordBuilder
-
-- We were unable to get to adding the funtionality of the program to take a user created crossword and turn it into an interactive one that can be played on the terminal. Currently, crosswords can only be generated randomly with a list of words and played on the terminal.
+- We decided to add a class called PosiitonedWord because we deemed that it would be useful to seperate new words and words that already have positions when implementing our various methods in CrosswordBuilder
+- We also ended up removing ClueBank.java entirely because it needlessly complicated things. Instead, we implmented the clues to be built into Word.java
+- We were unable to get to adding the funtionality of the program to take a user created crossword and turn it into an interactive one that can be played on the terminal due to time constraints. Currently, crosswords can only be generated randomly with a list of words and played on the terminal.
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - It's best not to divide and conquer; doing so leads to conflicting errors when pushing and pulling.
+- Skype/ voice chatting is an extremely useful tool when used in conjunction with screen sharing as a 2nd best option to face time. We often found that when out schedules conflicted, we could rely on an hour or two of skyping to be able to work on this project together. We were able to have a driver to actuallly write the code while two other members gave the driver suggestions, facilitated pushes/pulls and tested code.
 - EXTENSIVE testing is necessary before using a method in other classes. We spent so much time debugging only to find out that an "easy" method that we thought was air-tight really wasn't.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -121,5 +119,12 @@ LESSONS LEARNED
 <Taaseen Ali> :: Made sure Woo.java works with all classesm, updated flow.pdf, uml.pdf
 <Frank Chen> :: Remade flowchart and edited README
 <Eddie Zhu> :: Updated UML diagram and edited code
+
+2018-01-16
+--------------------------------------------------------------
+<Taaseen Ali> :: Added comments and last minute design changes
+<Frank Chen> :: Added comments and aided in design changes
+<Eddie Zhu> :: Added comments and aided in design changes
+
 
 ==============================================================

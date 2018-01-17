@@ -3,11 +3,10 @@ public class Crossword{
     int size, numWords;
     String[][] answers;
     PositionedWord wordList[];
-    String clues;
+  
     public Crossword(){ //Default constructor
 	numWords = 0;
 	size = 25; //initialize to a 25x25 grid
-	clues = "";
 	board =  new String[size][size]; 
 	answers = new String[size][size];
 	wordList = new PositionedWord[25];
@@ -50,6 +49,7 @@ public class Crossword{
 	return true;
     }
 
+    //Sets a positions on board to letter
     public boolean set(int x, int y, String s){  
 	if(x<0||y<0){
 	    System.out.println("(" + x + ", " + y + ") is an invalid position");
@@ -62,7 +62,9 @@ public class Crossword{
 	else board[y][x] = s;
 	return true;
     }
-      
+
+
+    //prints all clues from words in wordlist
     public void printClues(){
 	for(int i=0; i<numWords; i++){
 	    PositionedWord w = wordList[i];
@@ -73,6 +75,7 @@ public class Crossword{
 	}
     }
     
+    //iterates through answer array and prints out completed crossword
     public void printAnswers(){
 	System.out.print("    ");
 	for(int i=0; i<size; i++) System.out.print("[" + i%10 + "]");
@@ -90,6 +93,7 @@ public class Crossword{
 	}
     }
 
+    //creates a board template from answer array
     public void generateBoard(){
 	for(int i=0; i<size; i++){
 	    for(int k=0; k<size; k++){
@@ -97,6 +101,8 @@ public class Crossword{
 	    }
 	}
     }
+
+    //iterates through board to print out all the posiitons
     public void printBoard(){
 	System.out.print("    ");
 	for(int i=0; i<size; i++) System.out.print("[" + i%10 + "]");
@@ -112,14 +118,5 @@ public class Crossword{
 	    }
 	    System.out.println();
 	}
-    }
-    public static void main(String args[]){
-
-	Crossword c = CrosswordBuilder.generateFromFile("listOfWords.txt");
-
-	c.generateBoard();
-
-	new CrosswordDriver(c).play();
-
     }
 }		

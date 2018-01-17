@@ -56,7 +56,6 @@ public class CrosswordDriver {
 	System.out.println();
 	cw.printBoard();
     }
-
     //get user input for all the arguments required for set and pass is to the Crossword.set() function
     public boolean  setAnswer() {
 	int x, y;

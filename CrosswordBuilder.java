@@ -4,20 +4,24 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 class CrosswordBuilder{
+
+    //returns true if w's CrosswordPosiiton conflicts with the words already placed in cw
+    //eg. w intersects a word in cw without a common letter
     public static boolean collides(Crossword cw, PositionedWord w){
 	int x = w.getPos().getX();
 	int y = w.getPos().getY();
 	int size = w.getPos().getLength();
 
-	if(w.getPos().getDirection() ==  CrosswordPosition.DOWN){
+	if(w.getPos().getDirection() ==  CrosswordPosition.DOWN){ //if the word is vertical
 	    for(int i=0; i<size; i++){
-		if((size+y) >= cw.size || y < 0 ||
-		   ((cw.answers[i+y][x] != null) && !cw.answers[i+y][x].equals(w.getLetter(i)))){
-		    return true;
+		if((size+y) >= cw.size || y < 0 ||  //check to see if the wotd is within the crossword bounds
+		   ((cw.answers[i+y][x] != null) && !cw.answers[i+y][x].equals(w.getLetter(i)))){  //iterate through a...
+		    return true;                                                            //collumn to see if there are any letter conflicts
 		}
 	    }
 	}
-	
+
+	//do the same thing if the word is horizontal, except iterate through a row
 	if(w.getPos().getDirection() ==  CrosswordPosition.ACROSS){
 	    for(int i=0; i<size; i++){
 		if((size+x) >= cw.size || x < 0 ||
@@ -30,7 +34,8 @@ class CrosswordBuilder{
 
     }
 		   
-
+    //returns true if the CrosswordPosition of w causes w to be directly adjacent to
+    //the words already placed in cw
     public static boolean hasAdjacentWords(Crossword cw, PositionedWord w){
 	PositionedWord otherWord;
 	boolean ret = false;
@@ -39,14 +44,27 @@ class CrosswordBuilder{
 	int y = w.getPos().getY();
 	
         for(int i=0; i<cw.numWords; i++){
+	    //if there is ever an adjacent word positioning found, return true and exit the function
 	    if(ret == true) return true;
 	    otherWord = cw.wordList[i];
 	    int otherX = otherWord.getPos().getX();
 	    int otherY = otherWord.getPos().getY();
 	    int otherSize = otherWord.getPos().getLength();
-	    
-	    if(w.getPos().getDirection() == CrosswordPosition.DOWN){
-		if(otherWord.getPos().getDirection() == CrosswordPosition.ACROSS){
+
+	    //Where 'hello' is  w
+	    /*to check word positions similar to
+
+	    h e y
+	      h
+	      e
+	      l
+	      l
+	      o
+
+	      do the following:
+	     */
+	    if(w.getPos().getDirection() == CrosswordPosition.DOWN){ 
+		if(otherWord.getPos().getDirection() == CrosswordPosition.ACROSS){   
 		    if(otherY>=y && otherY <=y+size-1){
 			ret = (otherX == x+1)||
 			    (otherX+otherSize-1 == x-1);
@@ -55,6 +73,17 @@ class CrosswordBuilder{
 			ret = (otherX+otherSize-1 >= x && otherX<=x);
 		    }
 		}
+		
+		 /*to check word positions similar to
+
+		   h h 
+		   e e 
+		   l y
+		   l
+		   o
+
+		   do the following:
+		 */
 
 		if(otherWord.getPos().getDirection() == CrosswordPosition.DOWN){
 		    if(otherX <= x+1 && otherX >= x-1){
@@ -65,6 +94,15 @@ class CrosswordBuilder{
 		    }
 		}	    
 	    }
+
+	    /*to check word positions similar to
+	     
+	      y
+	      e
+	      h h e l l o
+
+	      do the following:
+	     */
 
 	     if(w.getPos().getDirection() == CrosswordPosition.ACROSS){
 		if(otherWord.getPos().getDirection() == CrosswordPosition.DOWN){
@@ -77,6 +115,14 @@ class CrosswordBuilder{
 		    }
 		}
 
+		 /*to check word positions similar to
+	     
+		   h e y
+		     h e l l o
+
+		   do the following:
+		 */
+
 		if(otherWord.getPos().getDirection() == CrosswordPosition.ACROSS){
 		    if(otherY <= y+1 && otherY >= y-1){
 			ret = (otherX < x+size && otherX+otherSize-1 >= x);
@@ -87,10 +133,14 @@ class CrosswordBuilder{
 		}	    
 	    }
 	}
+	//return true if word falls into one of the above categories
 	return ret;
      
     }
-  public static CrosswordPosition[] getInsertionSites(Crossword cw, Word w){
+    
+    //returns an array of CrosswordPositions with ALL viable positions to which word can be
+    //inserted into the crossword
+    public static CrosswordPosition[] getInsertionSites(Crossword cw, Word w){
 	ArrayList<CrosswordPosition> positions = new ArrayList<CrosswordPosition>();
 	PositionedWord word = new PositionedWord(w);
 	if(cw.numWords==0){
@@ -100,26 +150,26 @@ class CrosswordBuilder{
 	    return start;
 	}
 	
-	for(int k=0; k<cw.numWords; k++){
+	for(int k=0; k<cw.numWords; k++){ //for every word in the crossword
 	    PositionedWord otherWord = cw.wordList[k];
-	    if(otherWord.getPos().getDirection() == CrosswordPosition.DOWN){
-		word.getPos().setDirection(CrosswordPosition.ACROSS);
-		if(word.getCommonLetters(otherWord).length > 0){
+	    if(otherWord.getPos().getDirection() == CrosswordPosition.DOWN){  //compare orientation of the word in the crossword
+		word.getPos().setDirection(CrosswordPosition.ACROSS);         // to the word you want to insert. Based on the diff orientations,
+		if(word.getCommonLetters(otherWord).length > 0){              // do the folowing
 		    int x = otherWord.getPos().getX();
 		    int y = otherWord.getPos().getY();
-		    for(String s: word.getCommonLetters(otherWord)){
-			for(int i: otherWord.getLetterPos(s)){
-			    word.getPos().setY(i+y);
-			    word.getPos().setX(x-word.getLetterPos(s)[0]);
-			    if(!collides(cw, word) && !hasAdjacentWords(cw, word)){
-				positions.add(word.getPos().copy());
+		    for(String s: word.getCommonLetters(otherWord)){         //get all of the common letters between the two words
+			for(int i: otherWord.getLetterPos(s)){               //get the positions of these leters
+			    word.getPos().setY(i+y);                        
+			    word.getPos().setX(x-word.getLetterPos(s)[0]);  
+			    if(!collides(cw, word) && !hasAdjacentWords(cw, word)){  //for each intersection, see if there are any colisions/ adjacent words
+				positions.add(word.getPos().copy());                 //if not, add this position to the list of viable positions
 			    }
 			}
 		    }
 		}
 	    }
 
-	    if(otherWord.getPos().getDirection() == CrosswordPosition.ACROSS){
+	    if(otherWord.getPos().getDirection() == CrosswordPosition.ACROSS){ //for opposite orientation: (same steps followed as before, just with reversed x/y)
 		word.getPos().setDirection(CrosswordPosition.DOWN);
 		if(word.getCommonLetters(otherWord).length > 0){
 		    int x = otherWord.getPos().getX();
@@ -137,24 +187,24 @@ class CrosswordBuilder{
 	    }
 	}
 
-	CrosswordPosition[] retAr = new CrosswordPosition[positions.size()];
+	CrosswordPosition[] retAr = new CrosswordPosition[positions.size()];  //copy the arraylist to an array and return the array
 	for(int i=0; i< positions.size(); i++){
 	    retAr[i] = positions.get(i);
 	}
 	return retAr;
     }
 
-    
+    //inserts an array of words into a crossword
     public static ArrayList<Word> insert(Crossword cw, Word[] words){
 	ArrayList<Word> toInsert = new ArrayList<Word>();
-	for(Word w: words){
+	for(Word w: words){         //copy the array into an arraylist
 	    toInsert.add(w);
 	}
 	int numTries=0;
 	int size=toInsert.size();
-	while(toInsert.size()>0){
+	while(toInsert.size()>0){       //while there are still words in toInsert
 	    size = toInsert.size();
-	    for(int i=0; i<toInsert.size(); i++){
+	    for(int i=0; i<toInsert.size(); i++){  //try to insert them in order of appearance
 		Word w = toInsert.get(i);
 		CrosswordPosition[] pos = getInsertionSites(cw, w);
 		if(pos.length>0){
@@ -164,12 +214,13 @@ class CrosswordBuilder{
 		}
 	     }
 	    int newSize = toInsert.size();
-	    if(size==newSize) numTries++;
-	    if(numTries>1) break;
-	}
+	    if(size==newSize) numTries++;   //if no words were able to be inserted, add one to numtries
+	    if(numTries>1) break;  //if numtries > 1, return as there are no more possible insertion sites left for the remaining words
+	}   //if there are still possible insertion sites, keep going from the begining of the remaining list
 	return toInsert;
     }
 
+    //gets word from a file
     public static Word[] getWords(String f){
 	ArrayList<Word> words = new ArrayList<Word>();
 	Word[] ret = new Word[0];
@@ -194,6 +245,7 @@ class CrosswordBuilder{
 	return ret;
     }
 
+    //gets clues from a file
     public static String[] getClues(String f){
 	ArrayList<String> clues = new ArrayList<String>();
 	File file = new File(f);
@@ -217,15 +269,16 @@ class CrosswordBuilder{
 	}
 	return ret;
     }
-	
+
+    //generates a new random crossword from scratch from a file of word
     public static Crossword generateFromFile(String f){
-	Crossword c = new Crossword();
-	String[] clues = getClues("clues.txt");
-	Word[] words = getWords(f);
-	for(int i=0; i<words.length; i++)
-	    words[i].setClue(clues[i]);
-	insert(c, words);
-	return c;
+	Crossword c = new Crossword();  //make new crossword
+	String[] clues = getClues("clues.txt"); //get the clues
+	Word[] words = getWords(f);  //get the words
+	for(int i=0; i<words.length; i++)  
+	    words[i].setClue(clues[i]);  //link the clues with the corresponding words
+	insert(c, words);  //inseert the words into the crossword randomly
+	return c; //return generated crossword
     }
 }
 

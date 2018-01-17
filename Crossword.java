@@ -4,32 +4,33 @@ public class Crossword{
     String[][] answers;
     PositionedWord wordList[];
     String clues;
-    public Crossword(){
+    public Crossword(){ //Default constructor
 	numWords = 0;
-	size = 25;
+	size = 25; //initialize to a 25x25 grid
 	clues = "";
-	board =  new String[size][size];
+	board =  new String[size][size]; 
 	answers = new String[size][size];
 	wordList = new PositionedWord[25];
     }
 
-    public void insert(PositionedWord w){
+    //Inserts a Positioned Word into this instance of Crossword
+    public void insert(PositionedWord w){ 
 	int dir = w.getPos().getDirection();
 	int x = w.getPos().getX();
 	int y = w.getPos().getY();
 
-	if(dir == CrosswordPosition.DOWN){
+	if(dir == CrosswordPosition.DOWN){  //if vertical word...
 	    if(y+w.getPos().getLength() <= size){
-		for(int i=0; i<w.getPos().getLength(); i++){
-		    answers[i+y][x] = w.getLetter(i);
+		for(int i=0; i<w.getPos().getLength(); i++){ 
+		    answers[i+y][x] = w.getLetter(i);  //iterate through a collumn of the crossdword
 		}
 		wordList[numWords] = w;
 		numWords +=1;
 	    }
 	}
-	else if(dir == CrosswordPosition.ACROSS){
+	else if(dir == CrosswordPosition.ACROSS){ //if horizontal word...
 	    if(x+w.getPos().getLength()<= size){
-		for(int i=0; i<w.getPos().getLength(); i++){
+		for(int i=0; i<w.getPos().getLength(); i++){ //iterate through a row 
 		    answers[y][i+x] = w.getLetter(i);
 		}
 		wordList[numWords] = w;
@@ -39,6 +40,7 @@ public class Crossword{
 
     }
 
+    //Returns true if answer and board arrays are identical in value
     public boolean checkAnswers(){
 	for(int i=0; i<size; i++){
 	    for(int k=0; k<size; k++){

@@ -1,6 +1,6 @@
 class CrosswordPosition{
     private  int xcor, ycor, length, direction;
-    public static final int ACROSS = 1, DOWN = 2;
+    public static final int ACROSS = 1, DOWN = 2; //constants to be used across the program
     public CrosswordPosition(int x, int y, int length, int dir){
 	xcor = x;
 	ycor = y;
@@ -30,7 +30,8 @@ class CrosswordPosition{
     public void setDirection(int i) {direction = i;}
 
     public void setLength(int i) {length = i;}
-
+    
+    //returns a copy of the crossword
     public CrosswordPosition copy() {return new CrosswordPosition(xcor, ycor, length, direction);}
 }
 

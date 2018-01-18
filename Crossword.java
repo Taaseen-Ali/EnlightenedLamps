@@ -22,7 +22,7 @@ public class Crossword{
 	    if(y+w.getPos().getLength() <= size){
 		for(int i=0; i<w.getPos().getLength(); i++){ 
 		    answers[i+y][x] = w.getLetter(i);  //iterate through a collumn of the crossdword
-		}
+		} 
 		wordList[numWords] = w;
 		numWords +=1;
 	    }
